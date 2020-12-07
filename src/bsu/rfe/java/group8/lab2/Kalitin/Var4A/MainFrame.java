@@ -7,7 +7,6 @@ import java.awt.event.ActionListener;
 import java.io.IOException;
 import javax.swing.*;
 
-import static java.lang.Math.*;
 
 @SuppressWarnings("serial")
 // Главный класс приложения, он же класс фрейма
@@ -80,13 +79,13 @@ public class MainFrame extends JFrame {
 
 // Создать область с полями ввода для X Y Z
         JLabel labelForX = new JLabel("X:");
-        textFieldX = new JTextField("0", 10);
+        textFieldX = new JTextField("", 10);
         textFieldX.setMaximumSize(textFieldX.getPreferredSize());
         JLabel labelForY = new JLabel("Y:");
-        textFieldY = new JTextField("0", 10);
+        textFieldY = new JTextField("", 10);
         textFieldY.setMaximumSize(textFieldY.getPreferredSize());
         JLabel labelForZ = new JLabel("Z:");
-        textFieldZ = new JTextField("0", 10);
+        textFieldZ = new JTextField("", 10);
         textFieldZ.setMaximumSize(textFieldZ.getPreferredSize());
         Box hboxVariables = Box.createHorizontalBox();
 
@@ -107,7 +106,7 @@ public class MainFrame extends JFrame {
 // Создать область для вывода результата
         JLabel labelForResult = new JLabel("Результат:");
 //labelResult = new JLabel("0");
-        textFieldResult = new JTextField("0", 10);
+        textFieldResult = new JTextField("", 10);
         textFieldResult.setMaximumSize(
                 textFieldResult.getPreferredSize());
         Box hboxResult = Box.createHorizontalBox();
@@ -141,10 +140,10 @@ public class MainFrame extends JFrame {
         JButton buttonReset = new JButton("Очистить поля");
         buttonReset.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
-                textFieldX.setText("0");
-                textFieldY.setText("0");
-                textFieldZ.setText("0");
-                textFieldResult.setText("0");
+                textFieldX.setText("");
+                textFieldY.setText("");
+                textFieldZ.setText("");
+                textFieldResult.setText("");
             }
         });
 
@@ -158,11 +157,11 @@ public class MainFrame extends JFrame {
         JButton buttonMC = new JButton("MC");
         buttonMC.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent ev) {
-                TEMP4.setText("0");
-                textFieldResult.setText("0");
-                textFieldX.setText("0");
-                textFieldY.setText("0");
-                textFieldZ.setText("0");
+                TEMP4.setText("");
+                textFieldResult.setText("");
+                textFieldX.setText("");
+                textFieldY.setText("");
+                textFieldZ.setText("");
             }
         });
 
@@ -195,7 +194,7 @@ public class MainFrame extends JFrame {
         hboxMButtons.add(Box.createHorizontalGlue());
 //создание вывода sum
         JLabel labelforsum = new JLabel("sum:");
-        TEMP4 = new JTextField("0", 10);
+        TEMP4 = new JTextField("", 10);
         TEMP4.setMaximumSize(TEMP4.getPreferredSize());
         Box hboxTEMP = Box.createHorizontalBox();
         hboxTEMP.add(Box.createHorizontalGlue());
