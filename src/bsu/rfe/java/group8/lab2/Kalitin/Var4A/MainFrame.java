@@ -135,6 +135,9 @@ public class MainFrame extends JFrame {
                             "Ошибка в формате записи числа с плавающей точкой", "Ошибочный формат числа",
                             JOptionPane.WARNING_MESSAGE);
                 }
+                JOptionPane.showMessageDialog(MainFrame.this,
+                        "Calculated", "Success!",
+                        JOptionPane.INFORMATION_MESSAGE);
             }
         });
         JButton buttonReset = new JButton("Очистить поля");
@@ -146,7 +149,6 @@ public class MainFrame extends JFrame {
                 textFieldResult.setText("");
             }
         });
-
         Box hboxButtons = Box.createHorizontalBox();
         hboxButtons.add(Box.createHorizontalGlue());
         hboxButtons.add(buttonCalc);
@@ -154,17 +156,6 @@ public class MainFrame extends JFrame {
         hboxButtons.add(buttonReset);
         hboxButtons.add(Box.createHorizontalGlue());
 // Создание кнопку МС
-        JButton buttonMC = new JButton("MC");
-        buttonMC.addActionListener(new ActionListener() {
-            public void actionPerformed(ActionEvent ev) {
-                TEMP4.setText("");
-                textFieldResult.setText("");
-                textFieldX.setText("");
-                textFieldY.setText("");
-                textFieldZ.setText("");
-            }
-        });
-
         //Создать кнопку М+
         JButton buttonM = new JButton("M+");
         buttonM.addActionListener(new ActionListener() {
@@ -183,6 +174,16 @@ public class MainFrame extends JFrame {
 
                 String temp3 = Double.toString(sum);
                 TEMP4.setText(temp3);
+            }
+        });
+        JButton buttonMC = new JButton("MC");
+        buttonMC.addActionListener(new ActionListener() {
+            public void actionPerformed(ActionEvent ev) {
+                TEMP4.setText("");
+                textFieldResult.setText("");
+                textFieldX.setText("");
+                textFieldY.setText("");
+                textFieldZ.setText("");
             }
         });
         //coздание коробки для м-кнопок
