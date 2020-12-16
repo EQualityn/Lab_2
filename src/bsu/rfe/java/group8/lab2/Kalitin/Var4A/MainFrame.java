@@ -39,7 +39,6 @@ public class MainFrame extends JFrame {
         }
         else;
         return Math.pow((Math.sin(y)+y*y+Math.pow(Math.E,Math.cos(y)))+Math.pow((Math.log(z*z)+Math.sin(Math.PI*x*x)),1/3),0.5);
-
     }
     //Формула 2 для расчета
     public Double Formula_2 (double x, double y, double z){
@@ -164,7 +163,7 @@ public class MainFrame extends JFrame {
                 try {
                     String temp = textFieldResult.getText();
                     if (temp.isEmpty()) {
-                        throw new IOException("incorrect format");
+                        throw new IOException("Format is incorrect");
                     }
                     temp2 = Double.valueOf(temp);
                 } catch (IOException e) {
@@ -204,7 +203,6 @@ public class MainFrame extends JFrame {
         hboxTEMP.add(TEMP4);
         TEMP4.setEditable(false);
         hboxTEMP.add(Box.createHorizontalGlue());
-
 // Связать области воедино в компоновке BoxLayout
         Box contentBox = Box.createVerticalBox();
         contentBox.add(Box.createVerticalGlue());
